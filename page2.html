@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .top-image {
+            width: 375px;
+            height: 44px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 375px;
+            height: 800px;
+            position: relative;
+            border-radius: 10px 0px 0px 0px;
+            background-color: #f0f0f0; /* Added background color for visibility */
+        }
+
+        .skip-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: blue;
+            cursor: pointer;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.5px;
+            text-align: left;
+        }
+
+        .page-image {
+            width: 352px;
+            height: 234.61px;
+            position: absolute;
+            top: 156px;
+            left: 11px;
+            opacity: 1; /* Changed opacity to 1 to ensure the image is visible */
+        }
+
+        .page-heading {
+            width: auto; /* Adjusted width to fit the text */
+            height: 24px;
+            position: absolute;
+            top: 499px;
+            left: 16px;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: left;
+            opacity: 1; /* Changed opacity to 1 to ensure the heading is visible */
+        }
+
+        .page-paragraph {
+            width: 343px;
+            height: 60px;
+            position: absolute;
+            top: 538px;
+            left: 16px;
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.5px;
+            text-align: left;
+            opacity: 1; /* Changed opacity to 1 to ensure the paragraph is visible */
+        }
+
+        .curved-box {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 694px;
+            left: 299px;
+            border-radius: 50%; /* Make it a circle */
+            background-color: #89A1FF; /* Blue background color */
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 1; /* Changed opacity to 1 to ensure the box is visible */
+            transition: background-color 0.3s ease; /* Add transition effect */
+        }
+
+        .curved-box:hover {
+            background-color: #6c7cb9; /* Darker blue color on hover */
+        }
+    </style>
+</head>
+<body>
+    <img src="D:\last page.png" alt="Top Image" class="top-image">
+    <div class="container">
+        <div class="skip-button" onclick="window.location.href='D:\page.html'">Skip</div>
+        <img src="C:\Users\Maithili\Downloads\WhatsApp Image 2024-04-16 at 11.54.24 AM.jpeg" alt="Your Image" class="page-image">
+        <h1 class="page-heading">Get burn</h1>
+        <p class="page-paragraph">Let’s keep burning to achieve your goals, it hurts only temporarily, if you give up now you will be in pain forever</p>
+        <div class="curved-box" onclick="window.location.href='D:\page.html'">Next</div>
+    </div>
+</body>
+</html>

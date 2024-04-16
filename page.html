@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            width: 375px;
+            height: 800px;
+            position: relative;
+            background-color: white; /* Changed background color to white */
+            overflow: hidden; /* Prevents scrollbars */
+        }
+        .top-image {
+            width: 375px;
+            height: 44px;
+            margin: 0;
+            padding: 0;
+        }
+        .create-account-text {
+            width: 163px;
+            height: 23px;
+            position: absolute;
+            top: 68px;
+            left: 16px;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 23px;
+            text-align: left;
+            color: black; /* Changed text color to black */
+            opacity: 1;
+        }
+
+        .rectangle {
+            width: 343px;
+            height: 50px;
+            position: absolute;
+            border-radius: 12px;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #F1F1F1; /* Changed background color to light gray */
+        }
+
+        .text-inside-rectangle {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            text-align: center;
+            color: white;
+            opacity: 1;
+        }
+
+        .input-text {
+            width: 90%; /* Adjust input width */
+            height: 90%; /* Adjust input height */
+            border: none;
+            background: transparent; /* Set background to transparent */
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            text-align: center;
+            color: #7F7F7F; /* Changed text color to white */
+            outline: none;
+        }
+
+        .terms-checkbox {
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 431px;
+            left: 16px;
+            gap: 0px;
+            opacity: 1; /* Changed opacity to 1 to make checkbox visible */
+        }
+
+        .terms-text {
+            width: 313px;
+            height: 21px;
+            position: absolute;
+            top: 431px;
+            left: 46px;
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 21px;
+            text-align: left;
+            color: black; /* Changed text color to black */
+            opacity: 1;
+        }
+
+        .login-link {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            text-align: left;
+            color: blue; /* Changed text color to blue */
+            position: absolute;
+            top: 756px;
+            left: 90px;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .login-span {
+            color: black; /* Changed text color to black */
+        }
+
+        .google-icon {
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 699px;
+            left: 147px;
+            opacity: 1;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .fb-icon {
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 699px;
+            left: 214px;
+            background-color: #1A7AEB;
+            opacity: 1;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .bottom-line {
+            width: 157px;
+            height: 0px;
+            position: absolute;
+            top: 655px;
+            left: 202px;
+            border-bottom: 1px solid var(--gray-100, #7F7F7F); /* Changed border style to solid */
+            opacity: 1;
+            transform-origin: top left;
+            transform: rotate(-0deg);
+        }
+
+        .bottom-text {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14.63px;
+            text-align: left;
+            color: black; /* Changed text color to black */
+        }
+
+        .blue-rectangle {
+            width: 343px;
+            height: 50px;
+            position: absolute;
+            top: 595px;
+            left: 16px;
+            background-color: #7B91FF; /* Changed background color to blue */
+            border-radius: 12px;
+            opacity: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .blue-text {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            color: white; /* Changed text color to white */
+            opacity: 1;
+        }
+        
+        .or-text {
+            font-family: Montserrat;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 15px;
+            text-align: center;
+            color: black; /* Changed text color to black */
+            position: absolute;
+            top: 655px; /* Adjusted position */
+            left: 100px; /* Adjusted position */
+        }
+    </style>
+</head>
+<body>
+    <img src="D:\last page.png" alt="Top Image" class="top-image">
+    <div class="rectangle" style="top: 135px; left: 16px;">
+        <input class="input-text" type="text" placeholder="First Name">
+    </div>
+    <div class="rectangle" style="top: 209px; left: 16px;">
+        <input class="input-text" type="text" placeholder="Last Name">
+    </div>
+    <div class="rectangle" style="top: 283px; left: 16px;">
+        <input class="input-text" type="text" placeholder="Email">
+    </div>
+    <div class="rectangle" style="top: 357px; left: 16px;">
+        <input class="input-text" type="password" placeholder="Password">
+    </div>
+    <div class="create-account-text">Create an <span style="color: black;">account</span></div>
+    <div class="terms-checkbox"></div>
+    <div class="terms-text">
+        <input type="checkbox" class="checkbox"> <!-- Added checkbox input -->
+        <span>By proceeding, I agree to all <span class="terms-span" style="color: blue;">T&C</span> and Privacy Policy</span>
+    </div>
+    <div class="bottom-line"></div>
+    <div class="blue-rectangle" onclick="window.location.href = 'D:\pg5.html';">
+        <div class="blue-text">Create an account</div>
+    </div>
+    <div class="or-text">----------------OR----------------</div>
+    <div class="login-link" onclick="window.location.href = 'D:\pg5.html';">
+        <span style="color: black;">Already have an</span> 
+        <span class="login-span">account? <span style="color: blue;">Login</span></span>
+    </div>
+    <a href="https://accounts.google.com" target="_blank">
+        <img class="google-icon" src="C:\Users\Maithili\Downloads\WhatsApp Image 2024-04-16 at 11.54.23 AM (1).jpeg" alt="Google Icon">
+    </a>
+    <a href="https://www.facebook.com" target="_blank">
+        <img class="fb-icon" src="C:\Users\Maithili\Downloads\WhatsApp Image 2024-04-16 at 11.54.23 AM.jpeg" alt="Facebook Icon">
+    </a>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Roboto, sans-serif;
+      width: 375px;
+      height: 800px;
+      position: relative;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: #4CAF50;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    .redirect-vector {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .redirect-vector.left {
+      right: unset;
+      left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <a href="D:\page6.html" class="redirect-vector.left">&#60;</a>
+  <a href="D:\last.html" class="redirect-vector">&#62;</a>
+  <header class="bg-gray-800 text-white px-4 py-2 flex justify-between items-center">
+    <h1 class="text-xl font-bold">Workout Tracker</h1>
+    <i class="fas fa-ellipsis-v text-xl"></i>
+  </header>
+  <main class="px-4 py-4">
+    <section class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Calories Burned</h2>
+      <span class="text-gray-400 text-lg">Good job! Less than 320cal burned today</span>
+    </section>
+    
+    <div class="bg-gray-200 rounded-lg px-4 py-4">
+      <img src="C:\Users\Maithili\Downloads\WhatsApp Image 2024-04-16 at 10.21.24 PM.jpeg" alt="Workout Image" class="w-full h-auto rounded-lg">
+    </div>
+    <section class="mt-8">
+      <h2 class="text-xl font-bold">Upcoming Workouts</h2>
+      <div class="flex flex-col space-y-4 mt-4">
+        <div class="shadow-md rounded-lg px-4 py-4 flex justify-between items-center relative">
+          <div>
+            <h3 class="text-lg font-bold">Full Body Workout</h3>
+            <p class="text-gray-500">Today 3:00 PM</p>
+          </div>
+          <div class="toggle-switch">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+        <div class="shadow-md rounded-lg px-4 py-4 flex justify-between items-center relative">
+          <div>
+            <h3 class="text-lg font-bold">Upper Body Workout</h3>
+            <p class="text-gray-500">Feb 4, 3:30 PM</p>
+          </div>
+          <div class="toggle-switch">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-8">
+      <h2 class="text-xl font-bold">What Do You Want to Train?</h2>
+      <div class="grid grid-cols-3 gap-4 mt-4">
+        <button class="shadow-md rounded-lg bg-gray-200 px-4 py-4 flex justify-center items-center text-lg font-bold hover:bg-gray-300">
+          Full Body Workout
+        </button>
+        <button class="shadow-md rounded-lg bg-gray-200 px-4 py-4 flex justify-center items-center text-lg font-bold hover:bg-gray-300">
+          Arms
+        </button>
+        <button class="shadow-md rounded-lg bg-gray-200 px-4 py-4 flex justify-center items-center text-lg font-bold hover:bg-gray-300">
+          Chest
+        </button>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // JavaScript to add toggle functionality
+    const toggleSwitches = document.querySelectorAll('.toggle-switch input[type="checkbox"]');
+
+    toggleSwitches.forEach(switchInput => {
+      switchInput.addEventListener('change', function() {
+        const parentDiv = this.closest('.shadow-md');
+        if (this.checked) {
+          parentDiv.style.backgroundColor = 'lightgreen';
+        } else {
+          parentDiv.style.backgroundColor = 'transparent';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
+            width: 375px;
+            height: 800px;
+            position: relative;
+            background-color: white; /* Changed background color to white */
+            overflow: hidden; /* Prevents scrollbars */
+        }
+        .top-image {
+            width: 375px;
+            height: 44px;
+            margin: 0;
+            padding: 0;
+        }
+        .goals-text {
+            width: 219px;
+            height: 24px;
+            position: absolute;
+            top: 68px;
+            left: 78px;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24.38px;
+            text-align: left;
+            color: black; /* Changed text color to black */
+            opacity: 1;
+        }
+
+        .rectangle {
+            width: 343px;
+            height: 50px;
+            position: absolute;
+            border-radius: 12px;
+            opacity: 1;
+        }
+
+        .box {
+            width: auto; /* Adjusted width to fit the text */
+            height: 15px;
+            position: absolute;
+            gap: 0px;
+            opacity: 0px;
+            background-color: transparent; /* Changed background color to transparent */
+            color:black; /* Set text color to white */
+            font-family: Montserrat;
+            font-size: 12px; /* Set font size */
+            font-weight: 600;
+            line-height: 14.63px; /* Set line height */
+            text-align: left; /* Set text alignment */
+            white-space: nowrap; /* Ensures text remains in one line */
+            overflow: hidden; /* Hides overflow text */
+            text-overflow: ellipsis; /* Shows ellipsis for overflow text */
+            padding-right: 10px; /* Add padding to accommodate checkbox */
+        }
+
+        .confirm-rectangle {
+            width: 343px;
+            height: 50px;
+            position: absolute;
+            top: 665px;
+            left: 16px;
+            border-radius: 12px 0px 0px 0px;
+            opacity: 1;
+            background: linear-gradient(270deg, #7B91FF 0%, #95BEFF 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .confirm-text {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19.5px;
+            text-align: center;
+            color: white; /* Set text color to white */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            text-decoration: none; /* Remove default underline */
+        }
+        
+        /* Added style for checkboxes */
+        .checkbox {
+            position: absolute;
+            right: 10px; /* Adjust as needed */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="D:\last page.png" alt="Top Image" class="top-image">
+    <div class="goals-text">What are your goals?</div>
+    <div class="rectangle" style="top: 135px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 153px; left: 36px;">Weight Loss</div>
+    <div class="rectangle" style="top: 201px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 219px; left: 36px;">Muscle Gain</div>
+    <div class="rectangle" style="top: 267px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 285px; left: 36px;">Flexibility and Mobility</div>
+    <div class="rectangle" style="top: 333px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 351px; left: 36px;">General Fitness</div>
+    <div class="rectangle" style="top: 399px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 417px; left: 36px;">Event - specific training</div>
+    <div class="rectangle" style="top: 465px; left: 16px; background-color: #f1f1f1;"></div>
+    <div class="box" style="top: 483px; left: 36px;">Mindfulness and Mental Health</div>
+    <!-- Confirm Rectangle -->
+    <div class="confirm-rectangle">
+        <a href="D:\xyz.html" class="confirm-text">Confirm</a>
+    </div>
+    <script>
+        // Function to dynamically add checkboxes to each rectangle
+        function addCheckBoxes() {
+            // Get all elements with class "rectangle"
+            var rectangles = document.querySelectorAll('.rectangle');
+            
+            // Loop through each rectangle
+            rectangles.forEach(function(rectangle) {
+                // Create checkbox element
+                var checkBox = document.createElement('input');
+                checkBox.type = 'checkbox';
+                checkBox.className = 'checkbox'; // Add class for styling
+                
+                // Append checkbox to rectangle
+                rectangle.appendChild(checkBox);
+            });
+        }
+        
+        // Call the function to add checkboxes
+        addCheckBoxes();
+    </script>
+</body>
+</html>
